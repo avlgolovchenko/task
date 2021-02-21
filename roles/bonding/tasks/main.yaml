@@ -1,0 +1,8 @@
+---
+- name: upload all config
+  template: {{ item }}
+  loop:
+    - {{src: '01-netcfg.yaml', dest: '/etc/netplan/01-netcfg.yaml'}}
+    - {{src: '02-bonding.yaml', dest: '/etc/netplan/02-bonding.yaml'}}
+  notify:
+    - netplan apply

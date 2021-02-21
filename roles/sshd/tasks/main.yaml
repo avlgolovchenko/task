@@ -1,0 +1,6 @@
+- name: Setup another SSH port
+  lineinfile:
+    dest: "/etc/ssh/sshd_config"
+    regexp: "^Port"
+    line: "Port 9876"
+  notify: "Restart sshd"
