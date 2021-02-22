@@ -1,0 +1,8 @@
+---
+ip: "192.168.2.2"
+mask: "22"
+interface1: "ens18"
+interface2: "ens19"
+dns1: "1.1.1.1"
+dns2: "8.8.8.8"
+gateway: "192.168.0.1"
